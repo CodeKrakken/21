@@ -7,8 +7,9 @@ let dealer = new Dealer
 let sam = new Player
 dealer.shuffle(deck)
 dealer.deal(sam)
-sam.hit(dealer, deck)
-sam.hit(dealer, deck)
-sam.hit(dealer, deck)
-sam.hit(dealer, deck)
-sam.hit(dealer, deck)
+if (dealer.total(sam.hand) < 17 ) {
+  sam.hit(dealer, deck)
+}
+if (dealer.total(dealer.hand) <= dealer.total(sam.hand)) {
+  dealer.hit()
+}
