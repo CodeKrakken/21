@@ -16,4 +16,11 @@ describe('deck', function() {
   it('has a hash of picture card values', function() {
     expect(deck.pictures).toBeDefined()
   })
+
+  it('knows the value of the picture cards', function() {
+    expect(deck.pictures['A']).toEqual(11)
+    expect(deck.pictures['K']).toEqual(10)
+    expect(deck.pictures['Q']).toEqual(10)
+    expect(deck.pictures['J']).toEqual(10)
+  })
 })
