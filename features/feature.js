@@ -3,7 +3,12 @@ const Dealer = require('../lib/Dealer')
 const Player = require('../lib/Player')
 
 let deck = new Deck
-let dealer = new Dealer()
+let dealer = new Dealer
 let sam = new Player
 dealer.shuffle(deck)
 dealer.deal(sam)
+sam.hit(dealer, deck)
+sam.hit(dealer, deck)
+sam.hit(dealer, deck)
+sam.hit(dealer, deck)
+sam.hit(dealer, deck)
